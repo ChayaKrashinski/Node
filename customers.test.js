@@ -1,5 +1,13 @@
 const addCustomer = require('./customers');
 
-test('send with less params', () => {
-  expect(addCustomer(1, "sari")).toBe({"id":1, "name":sari, "phone":"0556-74101"});
+
+test('add customer - send with less params', () => {
+  expect(() => { addCustomer(1, "sari") })
+    .toThrow();
 });
+
+// test('add customer - send with invalid params', () => {
+//   expect(() => { addCustomer("1", "sari", "9797852") })
+//     .toThrow(
+//       "type of id can be only number");
+// });
